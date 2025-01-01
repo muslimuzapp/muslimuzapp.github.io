@@ -1,1 +1,3 @@
-# muslim-apps.github.io
+## Muslim UZ
+
+* [Website](https://muslimuzapp.github.io)
