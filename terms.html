@@ -1,0 +1,684 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Terms of Use</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="17dc13af-fa39-8057-8472-e2f5171b745d" class="page sans"><header><h1 class="page-title">Terms of Use</h1><p class="page-description"></p></header><div class="page-body"><p id="17dc13af-fa39-800a-8d69-c1aab135562d" class="">These Terms and Conditions of Use (the “Terms of Use”) apply to the Muslim mobile application (the “App”) which provides Muslim prayer times, Quran, Dhikrs and other information (collectively, the “Services”). The App is available on the App Store, Google Play and Huawei AppGallery.</p><p id="17dc13af-fa39-8051-b398-c67c5f95f911" class="">MUSLIM  APPS (“We”, “Us”, or “Our”) is the publisher, developer, owner and controller of the App. By using the App, you (“you”, “your”, “User”) agree to the Terms of Use; if you do not agree, do not use the App.</p><p id="17dc13af-fa39-8005-93f6-e8165301bf8b" class="">The App currently offers two versions, namely:</p><ul id="17dc13af-fa39-8049-bbdc-d1ece37b9819" class="bulleted-list"><li style="list-style-type:disc">a free version, and</li></ul><ul id="17dc13af-fa39-8066-88b5-f52c424478a7" class="bulleted-list"><li style="list-style-type:disc">a paid premium service with additional functionality (“Muslim Premium”),</li></ul><p id="17dc13af-fa39-806c-9429-fd6f941ae74a" class="">Both free and paid versions do not contain any advertisement.</p><p id="17dc13af-fa39-80ff-90b7-c3deb1845f06" class="">We reserve the right, at its sole discretion, to change, modify, add or remove the portions of these Terms of Use, at any time. It is your responsibility to check these Terms of Use periodically for changes. Your continued use of the App following the posting of changes will mean that you accept and agree to the changes. As long as you comply with these Terms of Use, We grant you a personal, non-exclusive, non-transferable, limited privilege to install and use the App.</p><h3 id="64563584-75ac-4a93-b925-de469c976825" class="">1. Other agreements</h3><p id="17dc13af-fa39-8014-948b-f8d84d34f88d" class="">Our <a href="https://www.notion.so/Privacy-Policy-17dc13affa3980cab4b6f63a45d62e05?pvs=21">Privacy Policy</a> – describing how We collect and process your personal data, how We use and protect this information and your associated rights to this information;</p><p id="17dc13af-fa39-80bc-ba28-ec64f76e8eb6" class="">You acknowledge that you have read, understood and accept these Other Agreements and agree to be bound by them.</p><h3 id="17dc13af-fa39-80ea-9296-e9299aa3eddc" class="">2. Copyrights; Restrictions on Use</h3><p id="17dc13af-fa39-80fc-8fa5-dae9ebe8ee78" class="">The content of the Services (the “Content”), including without limitation, video, audio, text, photos, and graphics is owned by Us or our licensors. Other than with respect to your own User Submissions: (a) the Content may not be copied, modified, reproduced, republished, posted, transmitted, sold, offered for sale, or redistributed in any way without our prior written permission and that of our applicable licensors; and (b) you must abide by all copyright notices, information, or restrictions contained in or attached to any Content. We give you a personal, revocable, non- assignable, non-sublicensable and non-exclusive right to access and use the Services in the manner permitted by these Terms. You acknowledge that you have no right to have access to all or any part of the Services in source code form.</p><h3 id="17dc13af-fa39-804a-9578-e5cc91619a82" class="">3. Use of Our Services</h3><p id="17dc13af-fa39-80e4-b823-deaeb2a0495e" class="">3.1. Compliance with Terms of Use. Your access to and use of Our Services are subject to these Terms of Use, the Other Agreements you agree to at Section 1 above and any applicable laws, rules and regulations as it applies to Our Services.</p><p id="17dc13af-fa39-80ea-9448-f8b7e64deecc" class="">3.2. Age Requirements. Although We do provide content suitable for children, Our Services are not intended to be used by children without supervision and approval of a parent or guardian. If you are under 13 years of age (or the age of majority in your state, territory or country of residence) you are not permitted to register or use Our Services or provide your personal data to Us.</p><p id="17dc13af-fa39-80ec-be72-f29957d8ea0b" class="">3.3. Binding Agreement. By registering to Our Services or accessing any Content, you enter into a binding agreement with Us and confirm that any information you provide Us is true, accurate and complete at all times, and that you are either:</p><p id="17dc13af-fa39-80b6-9cc1-db47485764e1" class="">a. 18 years of age (or the age of majority in your state, territory or country of residence), you consent and you agree to be bound by these Terms of Use and Other Agreements; or</p><p id="17dc13af-fa39-80a2-97af-f361eb0a2260" class="">b. 13 years of age, but under 18 years of age (or under the age of majority in your state, territory or country of residence), that your parent or guardian has consented to your use of Our Services and access to any content. Such consent shall also include consent and agreement to these Terms of Use and Other Agreements given on your behalf (including any modifications you made to your account with Us).</p><h3 id="17dc13af-fa39-80b3-b1b2-f3af9473a245" class="">4. Subscription and Payment</h3><p id="17dc13af-fa39-804f-8cba-ebaf3989a887" class="">4.1. Subscription. Muslim Plus content is made available and can be accessed only by users who have registered for a subscription plan (&quot;Subscription&quot;). Unless otherwise specified by Us, the price applicable for various subscription plans are available on Our Services.</p><p id="17dc13af-fa39-80ec-9cfd-cc7ff01eeeea" class="">4.2. Taxes and other charges. The Subscription Fee specified for each Subscription do not include any excise, sales, use or like taxes. You agree and acknowledge that the Subscription Fee is subject to increase by the amount of any such tax (excluding tax on net income) that We may be required to collect or pay upon the sale or delivery of Our Services purchased hereunder. You agree and acknowledge that you are responsible for all third-party internet access charges, bank charges and taxes not included within the Subscription Fee in connection with your use of Our Service, which may differ based on your service provider.</p><p id="17dc13af-fa39-804a-9513-e6aa2eadcc10" class="">4.3. Payment Method. You agree to the terms and conditions applicable to the Payment Method you had chosen. Payment Methods may vary by service, and may include credit or debit card, and/or other methods.</p><p id="17dc13af-fa39-800c-ac57-dfb129a6658d" class="">4.4. Accuracy of Payment Information. You acknowledge and agree that you are solely responsible for the accuracy of the payment information you provide including the bank account number/ credit card details and any other information necessary to complete the subscription process. You represent and warrant that you have the right to use any credit card or other payment information (including relating to any Payment Method) that you submit. We shall not be held liable and shall not be held responsible for any losses incurred whatsoever, whether direct, indirect, incidental or consequential, including without limitation any losses due to delay in processing of payment instruction or any credit card fraud.</p><p id="17dc13af-fa39-8080-a6af-eb52cdab0b8d" class="">4.5. Invoice. An invoice will be sent to you via your email provided during registration process once payments are effected through any of the Payment Method and confirmation of receipt of such payment from the payment process provider, unless such invoice is provided to you by the payment process provider.</p><p id="17dc13af-fa39-800c-be7c-c00e0d6489aa" class="">4.6. We use Apple and Google in-app purchases to process and facilitate the payment of your Subscription Fee. We will notify you if you have successfully completed your Subscription. WE DO NOT COLLECT, ACCESS, STORE OR PROCESS ANY CREDIT OR DEBIT CARD INFORMATION.</p><h3 id="17dc13af-fa39-8021-88ab-e1d5b618c2aa" class="">5. Warranty disclaimers</h3><p id="17dc13af-fa39-8039-9bb9-ca93c71d33c1" class="">THE SERVICE IS PROVIDED “AS IS” AND “AS AVAILABLE” WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY. FURTHER, MUSLIM AND ALL OWNERS OF THE CONTENT DISCLAIM ANY EXPRESS AND STATUTORY WARRANTIES REGARDING THE CONTENT, INCLUDING WARRANTIES OF SATISFACTORY QUALITY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON- INFRINGEMENT. NEITHER MUSLIM NOR ANY OWNER OF CONTENT WARRANTS THAT THE MUSLIM SERVICE OR CONTENT IS FREE OF MALWARE OR OTHER HARMFUL COMPONENTS. IN ADDITION, MUSLIM MAKES NO REPRESENTATION REGARDING, NOR DOES IT WARRANT OR ASSUME ANY RESPONSIBILITY FOR, ANY THIRD-PARTY APPLICATIONS (OR THE CONTENT THEREOF), USER CONTENT, DEVICES OR ANY PRODUCT OR SERVICE ADVERTISED, PROMOTED OR OFFERED BY A PARTY ON OR THROUGH MUSLIM SERVICE OR ANY HYPERLINKED WEB-SlTE, AND MUSLIM IS NOT RESPONSIBLE FOR ANY TRANSACTIONS BETWEEN YOU AND ANY THIRD-PARTY PROVIDERS OF THE FOREGOING. NO ADVICE OR INFORMATION WHETHER ORAL OR IN WRITING OBTAINED BY YOU FROM MUSLIM SHALL CREATE ANY WARRANTY ON BEHALF OF MUSLIM. THIS SECTION APPLIES TO THE FULLEST EXTENT PERMITTED APPLICABLE LAW.</p><h3 id="17dc13af-fa39-80e4-99d5-e7815afc2526" class="">6. Limitation of liability</h3><p id="17dc13af-fa39-805a-93bb-f6064eed59a7" class="">We shall in no event nor for any reason whatsoever be liable, even if We have been advised of the possibility of such damages, losses or expenses, for any damages, loss or expense, including direct, indirect, special, or consequential damage, or economic loss, arising from or in connection with (i) any access, use or the inability to access or use Our Services; (ii) any system, server or connection failure, error, omission, interruption, delay in transmission, computer virus or other malicious, destructive or corrupting code, agent program or macros; (iii) any use of or access to any other website or webpage provided through Our Services; (iv) any services, products, information, data, software or other material obtained or downloaded from Our Services or from any other website or webpage provided through Our Services or from any other party referred by or through the use of Our Services; or (v) your use or misuse of Our Services. In no event shall We be liable to you, or any other party for: (a) amounts due from other Users of Our Services in connection with the purchase of any products/services; (b) damages arising in connection with the downloading or installation of, or the inability to download or install the application to access Our Services, by you or other third party; and/or (c) sales, customs and/or import or export taxes.</p><h3 id="17dc13af-fa39-8001-8713-cd77c38f65d2" class="">7. Termination of Our Services</h3><p id="17dc13af-fa39-8046-a5b6-ef62a092bb21" class="">7.1. We reserve the right to immediately terminate, suspend, limit, or restrict your subscription (where applicable) or your use and/or access to Our Services at any time, without notice or liability to you or any other person, if you breach these Terms of Use, violate any law, rule, or regulation, or engage in any inappropriate conduct in relation to Our Services including your subscription (where applicable).</p><p id="17dc13af-fa39-80ef-aaec-cc1a060f32ef" class="">7.2. Without limiting the above, We may restrict or suspend your access to your account(s) for cause without notice to you, which cause includes but is not limited to (a) requests from law enforcement or other government authorities, (b) unexpected technical issues or problems, or (c) if We reasonably believe that your account(s) has been created fraudulently, your account(s) has been accessed fraudulently, or anyone uses your account(s) to commit fraud or for any purpose other than its intended purpose and in accordance with all of the requirements applicable thereto.</p><p id="17dc13af-fa39-80d5-8de3-dda15ecc9b01" class="">7.3. To the fullest extent permitted by law, you agree that We will not be liable to you or to any third party for any such restriction, suspension or termination of your access to your account(s).</p><p id="17dc13af-fa39-802f-9461-ca3e35e68e08" class="">7.4. Termination of these Terms of Use for any reason shall not affect your obligation to make full payment of any Subscription Fee payable if such Subscription Fee has not already been paid.</p><h3 id="17dc13af-fa39-806f-9da9-e56d7b340b8f" class="">8. Governing Law</h3><p id="17dc13af-fa39-8037-a0dd-cbb17993fc34" class="">These Terms of Use shall be governed by and construed in accordance with the laws of Kazakhstan, without regard to the conflict of laws principle. You agree to submit to the non-exclusive jurisdiction of the courts of Kazakhstan.</p><h3 id="17dc13af-fa39-8046-b892-fafff5adbf65" class="">9. Contact information</h3><p id="17dc13af-fa39-8006-a923-c9e41d81a224" class="">If you have any questions about the Terms of Use, please email us at <a href="mailto:muslimuzapps@gmail.com">support@muslim.app</a>.</p><p id="17dc13af-fa39-80a8-b9fc-c5b34c8a947a" class="">Last Updated: Jan 16, 2025</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
