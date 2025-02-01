@@ -1,2 +1,3 @@
 google.com, pub-9612143868526251, DIRECT, f08c47fec0942fa0
+google.com, pub-4413026374920949, DIRECT, f08c47fec0942fa0
 yandex.com, 108959380, DIRECT
