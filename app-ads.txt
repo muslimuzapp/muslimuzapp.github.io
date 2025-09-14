@@ -3,3 +3,6 @@ google.com, pub-4413026374920949, DIRECT, f08c47fec0942fa0
 
 facebook.com, 1301543468297273, RESELLER, c3e20eee3f780d68
 facebook.com, 4101561013425369, RESELLER, c3e20eee3f780d68
+
+smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
+smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
