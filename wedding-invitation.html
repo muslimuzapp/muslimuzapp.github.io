@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Свадебное приглашение</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700;800&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5EDDF;
+    --wine: #B8255F;
+    --wine-dark: #911E4A;
+    --text-dark: #2A2A2A;
+    --text-mid: #666;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #F0E4D8;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    min-height: 100vh;
+    position: relative;
+  }
+
+  /* Decorative wedding icons pattern on background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3C!-- Ring 1 --%3E%3Ccircle cx='45' cy='40' r='14' stroke='%23B8255F' stroke-width='1.2' fill='none' opacity='0.08'/%3E%3Ccircle cx='55' cy='40' r='14' stroke='%23B8255F' stroke-width='1.2' fill='none' opacity='0.08'/%3E%3C!-- Diamond --%3E%3Cpath d='M52 26 L55 22 L58 26' stroke='%23B8255F' stroke-width='0.8' fill='none' opacity='0.08'/%3E%3C!-- Heart --%3E%3Cpath d='M200 55 C200 55,192 48,192 43 C192 39,195 37,198 37 C199.8 37,200.8 38.5,201 40 C201.2 38.5,202.2 37,204 37 C207 37,210 39,210 43 C210 48,202 55,202 55Z' fill='%23B8255F' opacity='0.07'/%3E%3C!-- Ring 2 --%3E%3Ccircle cx='145' cy='160' r='14' stroke='%23B8255F' stroke-width='1.2' fill='none' opacity='0.06'/%3E%3Ccircle cx='155' cy='160' r='14' stroke='%23B8255F' stroke-width='1.2' fill='none' opacity='0.06'/%3E%3Cpath d='M152 146 L155 142 L158 146' stroke='%23B8255F' stroke-width='0.8' fill='none' opacity='0.06'/%3E%3C!-- Small hearts scattered --%3E%3Cpath d='M80 200 C80 200,76 196,76 193 C76 191,78 190,79 190 C79.8 190,80.3 191,80.5 191.8 C80.7 191,81.2 190,82 190 C83 190,85 191,85 193 C85 196,81 200,81 200Z' fill='%23B8255F' opacity='0.06'/%3E%3Cpath d='M260 120 C260 120,256 116,256 113 C256 111,258 110,259 110 C259.8 110,260.3 111,260.5 111.8 C260.7 111,261.2 110,262 110 C263 110,265 111,265 113 C265 116,261 120,261 120Z' fill='%23B8255F' opacity='0.06'/%3E%3C!-- Champagne glasses --%3E%3Cpath d='M270 240 L270 260 M266 260 L274 260 M270 240 L264 230 Q262 226,266 224 L270 226 M270 240 L276 230 Q278 226,274 224 L270 226' stroke='%23B8255F' stroke-width='0.8' fill='none' opacity='0.07'/%3E%3C!-- Bow/ribbon --%3E%3Cpath d='M40 280 Q30 270,40 265 Q50 270,40 280 Q50 290,40 295 Q30 290,40 280Z' stroke='%23B8255F' stroke-width='0.8' fill='none' opacity='0.06'/%3E%3C!-- Stars --%3E%3Cpath d='M180 270 L181 274 L185 275 L181 276 L180 280 L179 276 L175 275 L179 274Z' fill='%23B8255F' opacity='0.06'/%3E%3Cpath d='M120 90 L121 94 L125 95 L121 96 L120 100 L119 96 L115 95 L119 94Z' fill='%23B8255F' opacity='0.06'/%3E%3C/svg%3E");
+    background-size: 300px 300px;
+  }
+
+  .wrapper {
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 421px) {
+    body { padding: 24px; }
+    .wrapper {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,.25);
+    }
+  }
+
+  .screen-1, .screen-2 {
+    background: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── Deco SVG ── */
+  .deco-svg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 380px;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  .title-block {
+    text-align: center;
+    padding: 80px 30px 8px;
+    position: relative;
+    z-index: 5;
+  }
+
+  .finally {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    color: var(--text-dark);
+    font-weight: 400;
+  }
+
+  .married {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: var(--text-dark);
+    letter-spacing: 3px;
+    line-height: 1.15;
+    margin-top: 2px;
+  }
+
+  .photo-block { position: relative; z-index: 1; margin: 14px 0 0; }
+
+  .photo-area {
+    width: 100%;
+    aspect-ratio: 1 / 0.82;
+    background: linear-gradient(160deg, #E8CFA0 0%, #D4AD70 40%, #C89D60 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .photo-area::before {
+    content: '';
+    position: absolute;
+    top: 10%; left: 8%; right: 8%; bottom: 8%;
+    border: 2px solid var(--wine);
+    opacity: 0.12;
+    border-radius: 40% 60% 55% 45% / 50% 40% 60% 50%;
+    transform: rotate(-3deg);
+  }
+
+  .speech {
+    position: absolute;
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    color: var(--text-dark);
+    line-height: 1.3;
+    z-index: 3;
+  }
+  .speech-left { top: 22px; left: 18px; max-width: 155px; }
+  .speech-right { top: 30px; right: 18px; max-width: 100px; text-align: right; }
+  .speech .dash { color: var(--wine); font-weight: 600; }
+
+  .kids {
+    position: absolute;
+    bottom: 0; left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+    align-items: flex-end;
+    z-index: 2;
+  }
+  .kid { border-radius: 50% 50% 8px 8px; }
+  .kid-girl { width: 90px; height: 125px; background: rgba(255,255,255,.2); }
+  .kid-boy { width: 85px; height: 115px; background: rgba(255,255,255,.15); }
+
+  .banner {
+    background: linear-gradient(90deg, var(--wine) 0%, var(--wine-dark) 50%, var(--wine) 100%);
+    display: flex;
+    justify-content: space-around;
+    padding: 11px 16px;
+    position: relative;
+    z-index: 5;
+  }
+  .banner span {
+    font-family: 'Caveat', cursive;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 0.5px;
+  }
+
+  .invite-body {
+    text-align: center;
+    padding: 28px 28px 8px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--text-dark);
+  }
+
+  .date-line { text-align: center; padding: 12px 28px 28px; }
+  .date-line .d { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 22px; color: var(--wine); }
+  .date-line .t { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 22px; color: var(--text-dark); }
+
+  /* ══════════════════════════════════
+     TORN PAPER CALENDAR — 1 week only
+     ══════════════════════════════════ */
+  .cal-wrapper {
+    position: relative;
+    margin: 0 20px 8px;
+    padding: 0;
+  }
+
+  /* Torn top edge */
+  .torn-top {
+    display: block;
+    width: 100%;
+    height: 18px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Torn bottom edge */
+  .torn-bottom {
+    display: block;
+    width: 100%;
+    height: 18px;
+    position: relative;
+    z-index: 2;
+    margin-top: -1px;
+  }
+
+  .cal-card {
+    background: white;
+    padding: 14px 14px 10px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 20px rgba(0,0,0,.06);
+  }
+
+  .cal-month {
+    font-family: 'Caveat', cursive;
+    font-size: 28px;
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+  }
+
+  .cal-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    gap: 1px;
+  }
+
+  .cal-hdr {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--wine);
+    padding: 6px 0;
+  }
+
+  .cal-d {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  .cal-d.hl {
+    color: white;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+  }
+  .cal-d.hl .heart-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+  }
+  .cal-d.hl .heart-bg svg {
+    width: 40px;
+    height: 38px;
+  }
+
+  .save-label {
+    font-family: 'Caveat', cursive;
+    font-size: 17px;
+    color: var(--wine);
+    text-align: right;
+    padding: 4px 24px 20px;
+    opacity: .75;
+  }
+
+  /* ══════════════════════════════════
+     TIMING — rope/string zigzag
+     ══════════════════════════════════ */
+  .timing {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .timing-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+
+  .timing-sub {
+    font-family: 'Caveat', cursive;
+    font-size: 16px;
+    color: var(--wine);
+    opacity: .65;
+    margin-bottom: 28px;
+  }
+
+  .tl {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+  }
+
+  .tl-rope {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .tl-row {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    margin: 8px 0;
+  }
+
+  .tl-row.left { justify-content: flex-start; padding-left: 20px; }
+  .tl-row.center { justify-content: center; }
+  .tl-row.right { justify-content: flex-end; padding-right: 20px; }
+
+  .tl-item {
+    text-align: center;
+    background: var(--cream);
+    padding: 6px 16px;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  .tl-time {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--wine);
+    line-height: 1;
+  }
+
+  .tl-heart { display: block; margin: 2px auto; }
+
+  .tl-ev {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    color: var(--text-dark);
+    letter-spacing: 1px;
+  }
+
+  /* ── Location ── */
+  .loc {
+    padding: 24px 28px 36px;
+    text-align: center;
+  }
+
+  .loc-h {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 18px;
+  }
+
+  .venue-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .venue-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    position: relative;
+    background: linear-gradient(180deg, #aab8a0 0%, #8a9a80 30%, #7a8a70 70%, #6a7a60 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(0.7) contrast(0.95);
+    transition: filter .3s ease, transform .3s ease;
+  }
+
+  .venue-link:hover .venue-img,
+  .venue-link:active .venue-img {
+    filter: grayscale(0.3) contrast(1);
+    transform: scale(1.01);
+  }
+
+  .venue-img svg { width: 150px; height: auto; opacity: .45; }
+
+  .venue-img::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,.15) 100%);
+    pointer-events: none;
+  }
+
+  .venue-name {
+    font-family: 'Caveat', cursive;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+  }
+
+  .venue-addr {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .map-hint {
+    font-family: 'Caveat', cursive;
+    font-size: 15px;
+    color: var(--wine);
+    opacity: .7;
+  }
+
+  .fi { opacity: 0; transform: translateY(22px); transition: opacity .65s ease, transform .65s ease; }
+  .fi.vis { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 360px) {
+    .married { font-size: 26px; }
+    .tl-time { font-size: 36px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!-- ═══════════ SCREEN 1 ═══════════ -->
+<div class="screen-1">
+
+  <svg class="deco-svg" viewBox="0 0 420 380" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+    <path d="M58 48C58 48,42 36,42 27C42 20,48 16,53 16C56.5 16,58.5 19,59 22C59.5 19,61.5 16,65 16C70 16,76 20,76 27C76 36,58 48,58 48Z" fill="#B8255F"/>
+    <path d="M60 48 C75 72, 140 58, 210 72 C280 86, 340 110, 360 145 C380 180, 330 195, 280 175 C230 155, 250 200, 310 210 C370 220, 380 250, 340 270" 
+      stroke="#B8255F" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+    <path d="M340 264C340 264,334 258,334 253C334 249,337 247,339 247C340.5 247,341.5 249,342 250.5C342.5 249,343.5 247,345 247C347 247,350 249,350 253C350 258,342 264,342 264Z" fill="#B8255F" opacity="0.5"/>
+  </svg>
+
+  <div class="title-block fi">
+    <div class="finally">наконец-то</div>
+    <div class="married">МЫ ЖЕНИМСЯ</div>
+  </div>
+
+  <div class="photo-block">
+    <div class="photo-area">
+      <div class="speech speech-left">
+        <span class="dash">–</span> интересно, кто будет моим<br>мужем, когда я вырасту?
+      </div>
+      <div class="speech speech-right">
+        <span class="dash">–</span> это буду я!
+      </div>
+      <div class="kids">
+        <div class="kid kid-girl"></div>
+        <div class="kid kid-boy"></div>
+      </div>
+    </div>
+    <div class="banner">
+      <span>вы приглашены</span>
+      <span>вы приглашены</span>
+      <span>вы приглашены</span>
+    </div>
+  </div>
+
+  <div class="invite-body fi">
+    Дорогие друзья и близкие,<br>
+    мы приглашаем вас разделить<br>
+    с нами наше свадебное торжество,<br>
+    которое состоится
+  </div>
+
+  <div class="date-line fi">
+    <span class="d">11.04.2026</span>
+    <span class="t"> В 18:00</span>
+  </div>
+
+  <!-- ══ Torn paper calendar — 1 week ══ -->
+  <div class="cal-wrapper fi">
+    <!-- Torn top edge -->
+    <svg class="torn-top" viewBox="0 0 380 18" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 18 L0 12 Q5 8,10 11 Q15 14,20 10 Q25 6,30 9 Q35 13,40 10 Q45 5,50 8 Q55 12,60 9 Q65 5,70 10 Q75 14,80 11 Q85 7,90 10 Q95 14,100 9 Q105 4,110 8 Q115 13,120 10 Q125 6,130 9 Q135 13,140 10 Q145 5,150 8 Q155 12,160 10 Q165 6,170 9 Q175 13,180 10 Q185 5,190 8 Q195 12,200 9 Q205 5,210 10 Q215 14,220 11 Q225 7,230 10 Q235 14,240 9 Q245 4,250 8 Q255 13,260 10 Q265 6,270 9 Q275 13,280 10 Q285 5,290 8 Q295 12,300 9 Q305 5,310 10 Q315 14,320 11 Q325 7,330 10 Q335 14,340 9 Q345 5,350 8 Q355 12,360 10 Q365 6,370 9 Q375 13,380 11 L380 18 Z" 
+        fill="white"/>
+    </svg>
+
+    <div class="cal-card">
+      <div class="cal-month">апрель</div>
+      <div class="cal-grid">
+        <div class="cal-hdr">пн</div><div class="cal-hdr">вт</div><div class="cal-hdr">ср</div><div class="cal-hdr">чт</div><div class="cal-hdr">пт</div><div class="cal-hdr">сб</div><div class="cal-hdr">вс</div>
+        <div class="cal-d">6</div><div class="cal-d">7</div><div class="cal-d">8</div><div class="cal-d">9</div><div class="cal-d">10</div>
+        <div class="cal-d hl">
+          <span class="heart-bg"><svg viewBox="0 0 40 38" fill="#B8255F" xmlns="http://www.w3.org/2000/svg"><path d="M20 36C20 36,1 23,1 11C1 5,6.5 0.5,11.5 0.5C15.5 0.5,18.5 3,20 6C21.5 3,24.5 0.5,28.5 0.5C33.5 0.5,39 5,39 11C39 23,20 36,20 36Z"/></svg></span>
+          11
+        </div>
+        <div class="cal-d">12</div>
+      </div>
+    </div>
+
+    <!-- Torn bottom edge -->
+    <svg class="torn-bottom" viewBox="0 0 380 18" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0 L0 6 Q5 10,10 7 Q15 4,20 8 Q25 12,30 9 Q35 5,40 8 Q45 13,50 10 Q55 6,60 9 Q65 13,70 8 Q75 4,80 7 Q85 11,90 8 Q95 4,100 9 Q105 14,110 10 Q115 5,120 8 Q125 12,130 9 Q135 5,140 8 Q145 13,150 10 Q155 6,160 8 Q165 12,170 9 Q175 5,180 8 Q185 13,190 10 Q195 6,200 9 Q205 13,210 8 Q215 4,220 7 Q225 11,230 8 Q235 4,240 9 Q245 14,250 10 Q255 5,260 8 Q265 12,270 9 Q275 5,280 8 Q285 13,290 10 Q295 6,300 9 Q305 13,310 8 Q315 4,320 7 Q325 11,330 8 Q335 4,340 9 Q345 13,350 10 Q355 6,360 8 Q365 12,370 9 Q375 5,380 7 L380 0 Z" 
+        fill="white"/>
+    </svg>
+  </div>
+
+  <div class="save-label">сохраните дату</div>
+</div>
+
+<!-- ═══════════ SCREEN 2 ═══════════ -->
+<div class="screen-2">
+
+  <div class="timing">
+    <div class="timing-h fi">Тайминг</div>
+    <div class="timing-sub fi">план нашего дня</div>
+
+    <div class="tl">
+      <!-- Rope/string zigzag line: left → right → left → right -->
+      <svg class="tl-rope" viewBox="0 0 380 620" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <!-- Main rope path: center-top → left item → right item → left item → right item -->
+        <path d="M190 0 
+                 C190 20, 80 30, 75 75
+                 C70 120, 180 130, 300 155
+                 C340 165, 310 200, 305 230
+                 C300 260, 180 270, 75 295
+                 C40 305, 70 340, 75 370
+                 C80 400, 200 410, 305 435
+                 C340 445, 310 480, 305 510
+                 C300 540, 190 555, 190 580"
+          stroke="#B8255F" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.3"
+          stroke-dasharray="6 4"/>
+        <!-- Small decorative hearts along the rope -->
+        <path d="M75 72 C75 72,71 68,71 65 C71 63,73 62,74 62 C74.8 62,75.3 63,75.5 63.8 C75.7 63,76.2 62,77 62 C78 62,80 63,80 65 C80 68,76 72,76 72Z" fill="#B8255F" opacity="0.35"/>
+        <path d="M305 227 C305 227,301 223,301 220 C301 218,303 217,304 217 C304.8 217,305.3 218,305.5 218.8 C305.7 218,306.2 217,307 217 C308 217,310 218,310 220 C310 223,306 227,306 227Z" fill="#B8255F" opacity="0.35"/>
+        <path d="M75 367 C75 367,71 363,71 360 C71 358,73 357,74 357 C74.8 357,75.3 358,75.5 358.8 C75.7 358,76.2 357,77 357 C78 357,80 358,80 360 C80 363,76 367,76 367Z" fill="#B8255F" opacity="0.35"/>
+        <path d="M305 507 C305 507,301 503,301 500 C301 498,303 497,304 497 C304.8 497,305.3 498,305.5 498.8 C305.7 498,306.2 497,307 497 C308 497,310 498,310 500 C310 503,306 507,306 507Z" fill="#B8255F" opacity="0.35"/>
+      </svg>
+
+      <!-- Items positioned left/right alternating -->
+      <div class="tl-row left">
+        <div class="tl-item fi">
+          <div class="tl-time">18:00</div>
+          <svg class="tl-heart" width="20" height="18" viewBox="0 0 22 20" fill="#B8255F">
+            <path d="M11 19C11 19,1 12,1 6C1 2.7,3.8 0.5,6.5 0.5C8.5 0.5,10 1.8,11 3.5C12 1.8,13.5 0.5,15.5 0.5C18.2 0.5,21 2.7,21 6C21 12,11 19,11 19Z"/>
+          </svg>
+          <div class="tl-ev">сбор гостей</div>
+        </div>
+      </div>
+
+      <div style="height:40px"></div>
+
+      <div class="tl-row right">
+        <div class="tl-item fi">
+          <div class="tl-time">18:30</div>
+          <svg class="tl-heart" width="20" height="18" viewBox="0 0 22 20" fill="#B8255F">
+            <path d="M11 19C11 19,1 12,1 6C1 2.7,3.8 0.5,6.5 0.5C8.5 0.5,10 1.8,11 3.5C12 1.8,13.5 0.5,15.5 0.5C18.2 0.5,21 2.7,21 6C21 12,11 19,11 19Z"/>
+          </svg>
+          <div class="tl-ev">церемония</div>
+        </div>
+      </div>
+
+      <div style="height:40px"></div>
+
+      <div class="tl-row left">
+        <div class="tl-item fi">
+          <div class="tl-time">19:00</div>
+          <svg class="tl-heart" width="20" height="18" viewBox="0 0 22 20" fill="#B8255F">
+            <path d="M11 19C11 19,1 12,1 6C1 2.7,3.8 0.5,6.5 0.5C8.5 0.5,10 1.8,11 3.5C12 1.8,13.5 0.5,15.5 0.5C18.2 0.5,21 2.7,21 6C21 12,11 19,11 19Z"/>
+          </svg>
+          <div class="tl-ev">банкет</div>
+        </div>
+      </div>
+
+      <div style="height:40px"></div>
+
+      <div class="tl-row right">
+        <div class="tl-item fi">
+          <div class="tl-time">21:00</div>
+          <svg class="tl-heart" width="20" height="18" viewBox="0 0 22 20" fill="#B8255F">
+            <path d="M11 19C11 19,1 12,1 6C1 2.7,3.8 0.5,6.5 0.5C8.5 0.5,10 1.8,11 3.5C12 1.8,13.5 0.5,15.5 0.5C18.2 0.5,21 2.7,21 6C21 12,11 19,11 19Z"/>
+          </svg>
+          <div class="tl-ev">келин салом</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Location -->
+  <div class="loc">
+    <div class="loc-h fi">Локация</div>
+    <a href="https://yandex.ru/maps/org/sarbon/44492959675/" target="_blank" rel="noopener" class="venue-link fi">
+      <div class="venue-img">
+        <svg viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="25" y="40" width="110" height="65" stroke="white" stroke-width="1.5" fill="none" rx="2"/>
+          <path d="M25 40 L80 10 L135 40" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+          <line x1="53" y1="40" x2="53" y2="105" stroke="white" stroke-width="0.8" opacity=".4"/>
+          <line x1="80" y1="10" x2="80" y2="105" stroke="white" stroke-width="0.8" opacity=".4"/>
+          <line x1="107" y1="40" x2="107" y2="105" stroke="white" stroke-width="0.8" opacity=".4"/>
+          <line x1="25" y1="70" x2="135" y2="70" stroke="white" stroke-width="0.8" opacity=".4"/>
+          <path d="M70 105 L70 80 Q80 72 90 80 L90 105" stroke="white" stroke-width="1.2" fill="none"/>
+          <ellipse cx="10" cy="75" rx="16" ry="22" fill="rgba(255,255,255,.12)"/>
+          <ellipse cx="18" cy="88" rx="12" ry="15" fill="rgba(255,255,255,.08)"/>
+          <ellipse cx="150" cy="70" rx="18" ry="25" fill="rgba(255,255,255,.1)"/>
+          <ellipse cx="145" cy="90" rx="13" ry="14" fill="rgba(255,255,255,.07)"/>
+        </svg>
+      </div>
+      <div class="venue-name">Ресторан Сарбон</div>
+      <div class="venue-addr">ул. Буюк Ипак Йули, 374А<br>Ташкент</div>
+      <div class="map-hint">нажмите, чтобы открыть карту →</div>
+    </a>
+  </div>
+
+</div>
+</div>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.15 });
+document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
